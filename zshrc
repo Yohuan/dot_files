@@ -119,3 +119,6 @@ alias l='ls -CF'
 alias rm='rm -i'
 alias end='conda deactivate'
 
+# Fix conda with tmux
+[[ -z $TMUX ]] || conda deactivate; conda activate base
+
