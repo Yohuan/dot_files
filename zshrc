@@ -89,6 +89,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Set tab colors
+function tabcolor {
+  echo -n -e "\033]6;1;bg;red;brightness;$1\a"
+  echo -n -e "\033]6;1;bg;green;brightness;$2\a"
+  echo -n -e "\033]6;1;bg;blue;brightness;$3\a"
+}
+
+tabcolor $(jot -r 1 0 255) $(jot -r 1 0 255) $(jot -r 1 0 255)
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
